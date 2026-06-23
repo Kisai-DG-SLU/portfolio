@@ -2,7 +2,7 @@
 authors = ["Damien GUESDON <kisai.dg.slu@gmail.com>"]
 channels = ["conda-forge"]
 name = "portfolio"
-platforms = ["osx-64"]
+platforms = ["osx-64", "linux-64"]
 version = "0.1.0"
 
 [tasks]

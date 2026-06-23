@@ -10,6 +10,8 @@ pixi.lock
 data/
 _bmad-output/
 
+sophia-brain/
+
 .venv_conda
 venv
 .venv
