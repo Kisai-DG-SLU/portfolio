@@ -82,7 +82,7 @@ style: |
     left: 10px;
     width: 90px;
     height: 90px;
-    background-image: url('images/logo-sophia.svg');
+    background-image: url('images/sophia-icon-512.png');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.8;
@@ -634,7 +634,7 @@ déployer, sécuriser et monitorer sa plateforme."
 </div>
 
 <div class="footer-logo-block">
-  <img src="images/logo-sophia.svg" class="logo-fin" alt="Logo SophIA">
+  <img src="images/sophia-icon-512.png" class="logo-fin" alt="Logo SophIA">
   <div class="brand-text">SophIA · Sovereign AI Platform</div>
 </div>
 
