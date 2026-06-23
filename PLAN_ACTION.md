@@ -44,6 +44,19 @@
 
 ## Projets relies
 
-- [sophia-website](https://forge-sophia.kisai.fr/projets-perso/sophia-website) -- Description technique de SophIA
-- [Dashboard](https://forge-sophia.kisai.fr/projets-perso/Dashboard) -- Portfolio final
-- [poso_logic](https://forge-sophia.kisai.fr/projets-formation/poso_logic) -- Projet 14 (en cours de finalisation)
+- [Site vitrine SophIA](https://sophia.kisai.fr/) -- Projet technique
+- [Dashboard Portfolio](https://kisai-dg-slu.github.io) -- Portfolio en ligne
+- [Depot public P15](https://github.com/Kisai-DG-SLU/portfolio) -- Depot du projet de formation
+
+## Suivi de session
+
+### Session du 23 juin 2026
+
+**Travail effectue :**
+- Redaction du rapport de conduite de projet (7 sections, ~420 lignes)
+- Correction des references : suppression des URLs Forgejo, remplacement par URLs publiques GitHub et sites
+- Clarification des depots : sophia-platform (code SophIA) vs sophia-brain (Chess Master P13)
+- Mise a jour du README avec les URLs publiques et statut a jour
+- Mise a jour du plan d action (toutes les etapes marquees faites)
+
+**Etat :** Projet termine, reste preparation soutenance orale
