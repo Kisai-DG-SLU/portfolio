@@ -290,7 +290,7 @@ L'investissement initial est amorti en moins d'un an par rapport a une solution 
 
 Le projet est gere selon une methodologie Kanban/Scrum hybride, adaptee au travail en solo :
 
-- **Backlog** : tickets Forgejo dans le depot sophia-brain
+- **Backlog** : tickets Forgejo dans le depot sophia-platform
 - **Sprints** : jalons definis dans le plan d'action (/mnt/memory/PLAN_ACTION.md)
 - **Revues** : validation des livrables a chaque fin de phase
 
@@ -369,7 +369,7 @@ Pour toute organisation souhaitant internaliser une plateforme IA souveraine, la
 - [Site vitrine SophIA](https://sophia.kisai.fr) -- Projet technique personnel
 - [Dashboard Portfolio](https://kisai-dg-slu.github.io) -- Portfolio en ligne (source : projets-perso/Dashboard)
 - [Depot SophIA](https://forge-sophia.kisai.fr/projets-clients/sophia-website) -- Code source du site vitrine
-- [Documentation technique](https://forge-sophia.kisai.fr/projets-perso/sophia-brain) -- Code de la plateforme
+- [Depot plateforme SophIA](https://forge-sophia.kisai.fr/projets-clients/sophia-platform) -- Code source de la plateforme
 
 ### 7.2 Diagramme de progression des competences
 
