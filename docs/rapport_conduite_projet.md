@@ -70,15 +70,15 @@ SophIA est une plateforme multi-agents organisée en 5 piliers interconnectés :
 +---------------------------------------------------+
 | 1. Fondations : Materiel & K8s (OKD SNO)          |
 |    - GPU NVIDIA Tesla A2, SCOS immutable          |
-|    - 9 namespaces isoles (git, core, inference,    |
-|      memory, dmz, skills, apps, sandbox, test)     |
+|    - 9 namespaces isoles (git, core, inference,   |
+|      memory, dmz, skills, apps, sandbox, test)    |
 +---------------------------------------------------+
            |                    |
            v                    v
 +-------------------+  +---------------------+
 | 2. Cerveau        |  | 3. Memoire RAG      |
-| Hermes (orchestre)|  | Qdrant + pipeline    |
-| LiteLLM (routage) |  | embeddings           |
+| Hermes (orchestre)|  | Qdrant + pipeline   |
+| LiteLLM (routage) |  | embeddings          |
 +-------------------+  +---------------------+
            |                    |
            v                    v
@@ -419,5 +419,3 @@ mindmap
 | DPO | Direct Preference Optimization |
 
 ---
-
-*Document rédigé en juin 2026 dans le cadre de la formation AI Engineer (Projet 15).*
