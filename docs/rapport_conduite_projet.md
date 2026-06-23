@@ -366,10 +366,12 @@ Pour toute organisation souhaitant internaliser une plateforme IA souveraine, la
 
 ### 7.1 Liens vers les livrables
 
-- [Site vitrine SophIA](https://sophia.kisai.fr) -- Projet technique personnel
-- [Dashboard Portfolio](https://kisai-dg-slu.github.io) -- Portfolio en ligne (source : projets-perso/Dashboard)
-- [Depot SophIA](https://forge-sophia.kisai.fr/projets-clients/sophia-website) -- Code source du site vitrine
-- [Depot plateforme SophIA](https://forge-sophia.kisai.fr/projets-clients/sophia-platform) -- Code source de la plateforme
+- [Site vitrine SophIA](https://sophia.kisai.fr/) -- Projet technique personnel
+- [Dashboard Portfolio](https://kisai-dg-slu.github.io) -- Portfolio en ligne
+- [Depot du projet P15](https://github.com/Kisai-DG-SLU/portfolio) -- Depot public du projet de formation
+- [Depot site vitrine](https://github.com/Kisai-DG-SLU/SophIA) -- Code source du site sophia.kisai.fr
+- [Depot plateforme SophIA](https://github.com/Kisai-DG-SLU/sophia-platform) -- Code source de la plateforme
+- [Depot Dashboard](https://github.com/Kisai-DG-SLU/kisai-dg-slu.github.io) -- Code source du Dashboard
 
 ### 7.2 Diagramme de progression des competences
 

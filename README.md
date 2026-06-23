@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat&logo=python)
 ![OKD](https://img.shields.io/badge/OKD-1.34-red?style=flat&logo=openshift)
 ![GPU](https://img.shields.io/badge/GPU-NVIDIA%20Tesla%20A2-green?style=flat&logo=nvidia)
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange)
+![Status](https://img.shields.io/badge/Status-Done-green)
 
 ---
 
@@ -32,7 +32,8 @@ Le projet s appuie sur **SophIA**, une plateforme d orchestration d agents IA de
 ### Etape 1 — Projet technique personnel + Rapport
 
 - **Projet technique :** SophIA (plateforme d orchestration d agents IA sur OKD)
-- **Documentation :** [sophia-website](https://forge-sophia.kisai.fr/projets-perso/sophia-website)
+- **Site vitrine :** [sophia.kisai.fr](https://sophia.kisai.fr/)
+- **Depot public :** [github.com/Kisai-DG-SLU/portfolio](https://github.com/Kisai-DG-SLU/portfolio)
 - **Rapport de conduite de projet** selon le template officiel
 
 ### Etape 2 — Carte mentale
@@ -43,8 +44,8 @@ Le projet s appuie sur **SophIA**, une plateforme d orchestration d agents IA de
 
 ### Etape 3 — Portfolio final
 
-- Integration dans le dashboard : [Dashboard](https://forge-sophia.kisai.fr/projets-perso/Dashboard)
-- Site vitrine presentant l ensemble des realisations
+- Dashboard portfolio : [kisai-dg-slu.github.io](https://kisai-dg-slu.github.io)
+- Site vitrine SophIA : [sophia.kisai.fr](https://sophia.kisai.fr/)
 - Support de demarchage professionnel (Head of AI Platform)
 
 ---
@@ -70,9 +71,9 @@ Le projet s appuie sur **SophIA**, une plateforme d orchestration d agents IA de
 
 ## Livrables
 
-- [ ] **Livrable 1** — Portfolio en ligne (Dashboard)
-- [ ] **Livrable 2** — Rapport de conduite de projet (PDF)
-- [ ] **Livrable 3** — Lien vers le projet technique (SophIA)
+- [x] **Livrable 1** — Portfolio en ligne (Dashboard)
+- [x] **Livrable 2** — Rapport de conduite de projet (PDF)
+- [x] **Livrable 3** — Lien vers le projet technique (SophIA)
 
 ---
 
@@ -80,15 +81,15 @@ Le projet s appuie sur **SophIA**, une plateforme d orchestration d agents IA de
 
 - [x] Initialisation du pod dev-pod-portfolio
 - [x] Specifications chargees
-- [ ] Etape 1 : Redaction du rapport de conduite de projet
-- [ ] Etape 2 : Creation de la carte mentale
-- [ ] Etape 3 : Integration du portfolio Dashboard
+- [x] Etape 1 : Rapport de conduite de projet
+- [x] Etape 2 : Carte mentale
+- [x] Etape 3 : Portfolio Dashboard
 - [ ] Soutenance
 
 ---
 
 ## Ressources
 
-- [Template du rapport de conduite de projet](https://forge-sophia.kisai.fr/projets-formation/portfolio)
-- [SophIA — Documentation](https://forge-sophia.kisai.fr/projets-perso/sophia-website)
-- [Dashboard Portfolio](https://forge-sophia.kisai.fr/projets-perso/Dashboard)
+- [Depot public du projet P15](https://github.com/Kisai-DG-SLU/portfolio)
+- [Site vitrine SophIA](https://sophia.kisai.fr/)
+- [Dashboard Portfolio](https://kisai-dg-slu.github.io)
