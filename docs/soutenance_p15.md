@@ -304,17 +304,19 @@ style: |
   }
 ---
 
-<!--
-Note: Slide d'ouverture. Parler 1 min. Capter l'attention.
-Présenter SophIA comme l'aboutissement de 15 projets et 1608h de formation.
-Annoncer le plan : contexte, portfolio, architecture, gestion de projet, bilan.
-
-CHALLENGE: Objectif pro. Si Charlotte demande "où vous voyez-vous dans 3 ans ?",
-répondre Head of AI Platform avec les mots : "encadrer, challenger et guider
-les équipes d'ingénierie".
--->
-
 <!-- _class: lead -->
+
+<!--
+(30 sec a 1 min)
+
+Bonjour, je suis Damien Guesdon.
+
+J'ai suivi la formation AI Engineer d'OpenClassrooms. Pas pour changer de métier — j'etais directeur technique. Pour ajouter l'IA a ma boite a outils. Pour comprendre assez bien ce que mes equipes font, et pouvoir les challenger, les guider, federer autour d'un objectif commun sans me faire enfumer.
+
+Cette presentation, c'est la visite guidee de mes trois livrables P15 : mon projet technique SophIA, ma carte mentale, et mon portfolio en ligne.
+
+On commence par le contexte qui a donne naissance a tout ca.
+-->
 
 # **SophIA**
 ## Portfolio AI Engineer
@@ -329,15 +331,19 @@ les équipes d'ingénierie".
 ---
 
 <!--
-Note: 1 min 30. Contextualiser le marché de l'IA.
-"Les entreprises découvrent ChatGPT et injectent leurs brevets sur des serveurs
-étrangers sans gouvernance. C'est le phénomène Shadow AI."
-La problématique n'est pas de "faire de l'IA" mais de le faire en maîtrisant
-sa souveraineté.
+(1 min 30)
 
-CHALLENGE: Choix OKD vs cloud. Justifier : OKD SNO bare-metal = souveraineté,
-coût maîtrisé, isolation réseau. Le cloud aurait été plus simple mais
-n'aurait pas répondu au besoin de cloisonnement.
+Avant de parler des livrables, plantons le decor.
+
+Aujourd'hui, les entreprises decouvrent l'IA via ChatGPT, Copilot, et autres outils SaaS. Le probleme ? Vos brevets, vos donnees financieres, vos secrets industriels partent sur des serveurs a l'etranger, souvent sans que personne ne s'en rende compte. C'est ce qu'on appelle la Shadow AI.
+
+J'ai vecu ca en tant que directeur technique : j'ai vu des equipes deployer des solutions IA sans aucune gouvernance. Pas par mauvaise volonte, mais parce qu'il n'y avait pas d'alternative interne.
+
+SophIA est nee de ce constat. Ce n'est pas juste un projet technique de plus — c'est la reponse a un besoin metier concret : comment faire de l'IA en maitrisant sa souverainete ?
+
+Le choix de partir sur OKD SNO bare-metal, c'est ce qui permet l'air-gap : aucune donnee ne quitte le cluster. Est-ce que c'est plus complexe qu'une solution cloud ? Oui. Est-ce que c'est le bon choix quand la souverainete est l'exigence numero un ? Absolument. Le cloud aurait ete plus simple a deployer, mais il n'aurait pas repondu au besoin de cloisonnement.
+
+Ca m'a aussi conforte dans mon approche : en tant que manager, je ne veux pas subir les choix techniques de mes equipes — je veux les comprendre et les valider.
 -->
 
 # 1. Contexte & Problématique
@@ -370,17 +376,24 @@ n'aurait pas répondu au besoin de cloisonnement.
 ---
 
 <!--
-Note: 2 min. Parcourir la progression. Montrer la montée en compétence.
-"De P1 à P15, chaque projet a apporté une brique qui trouve sa place
-dans l'architecture finale de SophIA."
+(2 min)
 
-CHALLENGE: Apport du portfolio. Le portfolio ne montre pas seulement les compétences,
-il démontre la capacité à les intégrer dans un ensemble cohérent.
+Entrons dans le premier livrable : mon projet technique personnel SophIA.
+
+Pour le comprendre, il faut voir d'ou je viens. J'ai 20 ans d'experience en infrastructure critique — reseau MPLS, Cisco, BGP, direction technique. Mais l'IA, c'etait nouveau pour moi.
+
+J'ai donc suivi les 15 projets de la formation, soit 1608 heures au total. 804 heures supervisees, 804 heures guidees. Chaque projet m'a apporte une brique. Et chaque brique, je l'ai construite moi-meme.
+
+Pourquoi c'est important ? Parce qu'en tant que directeur technique, j'aurais pu me contenter de manager des equipes qui font. Mais non — j'ai voulu mettre les mains dans le cambouis. Pas pour devenir ingenieur, mais pour comprendre ce que mes equipes vivent au quotidien. Pour savoir reconnaitre une architecture bancale, challenger un choix technique, et gagner la confiance de mes equipes parce que je parle le meme langage qu'elles.
+
+Regardez le tableau : le RAG, je l'ai experimente en P7. Le deploiement sur OKD en P12. L'orchestration d'agents en P13. L'inference LLM locale en P14. Chaque brique de SophIA a ete testee, validee, comprise dans un projet precedent. SophIA, c'est la synthese de tout ca.
+
+Ce que ce portfolio montre, ce n'est pas seulement "j'ai fait 15 projets". C'est "voici comment ces 15 projets construisent une vision coherente". Et c'est exactement ce qu'on attend d'un Head of AI Platform.
 -->
 
-# 2. Les 15 Projets Fondateurs
+# 2. Livrable 1 : SophIA
 
-#### **1608 heures de formation — <strong>804 h supervisées + 804 h guidées</strong>
+#### **Projet technique personnel — <strong>1608 heures, 15 projets fondateurs</strong>
 
 <div class="staff-grid">
   <div>
@@ -409,57 +422,24 @@ il démontre la capacité à les intégrer dans un ensemble cohérent.
 ---
 
 <!--
-Note: 2 min. Montrer le portfolio. Parler du Dashboard React, de la carte mentale,
-de la façon dont les compétences sont organisées.
+(2 min)
 
-CHALLENGE: Évolution du métier. "L'AI Engineer d'aujourd'hui doit maîtriser
-l'infrastructure, la sécurité, le coût et la gouvernance."
+Entrons dans le coeur technique du premier livrable.
+
+SophIA, c'est une plateforme multi-agents organisee en 9 namespaces OKD. 9 zones fonctionnelles isolees, dont certaines sont en air-gap — pas d'acces sortant. Pourquoi 9 ? Parce que chaque zone a un job precis.
+
+La zone usine, c'est Forgejo et le CI/CD — la seule qui communique avec l'exterieur. La zone cerveau, c'est l'orchestration centrale Hermes et le routeur LiteLLM. Les zones inference et memoire sont en air-gap : le GPU et la base vectorielle Qdrant. Aucune donnee n'en sort. La zone DMZ est le point d'entree utilisateur. Et il y a des zones pour les outils, le frontend, le dev, les tests.
+
+Ensuite, le Pantheon agentique : cinq agents specialises. Hermes orchestre tout. Dionysos supervise le cluster. Hephaistos cree des environnements de dev a la demande. Athena gere les droits d'acces. Ouranos valide les mises en production.
+
+J'ai concu cette architecture comme un chef d'orchestre. Les agents sont independants — comme les equipes que je dirige. Chacun a son perimetre, ses responsabilites, son isolation. Si un agent tombe, les autres continuent. C'est une architecture industrielle, pas un POC.
+
+La stack technique : OKD SNO, LiteLLM, Qdrant, Prometheus, Grafana, Forgejo. Chaque techno a ete choisie pour sa maturite et sa compatibilite avec l'air-gap.
+
+J'ai fait ce projet en solo, mais je l'ai pense comme si c'etait une equipe. Parce que c'est comme ca que je travaille : je conçois l'architecture, je valide les choix, je definis les perimetres. Et demain, avec une equipe, je passerai la main sur l'execution tout en gardant la vision.
 -->
 
-# 3. Portfolio & Compétences
-
-#### **Trois livrables opérationnels — <strong>Objectif : Head of AI Platform</strong>
-
-<div class="rgpd-grid">
-  <div class="rgpd-col">
-    <div class="rgpd-title">Dashboard React</div>
-    <div class="rgpd-text">Portfolio en ligne déployé sur GitHub Pages<br><br>
-      <a href="https://kisai-dg-slu.github.io">kisai-dg-slu.github.io</a><br><br>
-      15 projets avec progression visible
-    </div>
-  </div>
-  <div class="rgpd-col">
-    <div class="rgpd-title">Carte Mentale</div>
-    <div class="rgpd-text">Compétences hard skills et soft skills<br><br>
-      Liens entre projets et architecture SophIA<br><br>
-      Axes d'amélioration identifiés
-    </div>
-  </div>
-  <div class="rgpd-col">
-    <div class="rgpd-title">Site Vitrine</div>
-    <div class="rgpd-text">Plateforme SophIA en ligne<br><br>
-      <a href="https://sophia.kisai.fr">sophia.kisai.fr</a><br><br>
-      Point d'entrée de la plateforme agentique
-    </div>
-  </div>
-</div>
-
-<blockquote>
-"L'objectif professionnel : encadrer, challenger et guider les équipes d'ingénierie en tant que Head of AI Platform."
-</blockquote>
-
----
-
-<!--
-Note: 2 min. C'est le cœur technique. Expliquer l'architecture OKD,
-les 9 namespaces, les 5 agents du Pantheon.
-
-CHALLENGE: Gestion de projet solo. "L'architecture a été pensée comme si
-c'était une équipe : chaque agent est indépendant, chaque namespace isolé.
-C'est une architecture industrielle, pas un POC."
--->
-
-# 4. Architecture SophIA
+# 3. Architecture SophIA
 
 #### **Cluster OKD SNO bare-metal — <strong>GPU NVIDIA Tesla A2</strong>
 
@@ -496,15 +476,124 @@ C'est une architecture industrielle, pas un POC."
 ---
 
 <!--
-Note: 1 min 30. Expliquer la démarche de gestion de projet.
-Montrer la rigueur : backlog, sprints, KPIs, budget.
+(1 min 30)
 
-CHALLENGE: Gestion de projet solo (bis). "Le risque du solo, c'est le manque
-de regard critique. Je l'ai compensé par des outils de monitoring,
-des tests systématiques et une documentation rigoureuse."
+Deuxieme livrable : la carte mentale.
+
+C'est l'exercice de reflexivite du P15. L'idee, c'est de prendre du recul sur ce que j'ai appris et de structurer mes competences.
+
+J'ai organise la carte en deux grandes parties. Les hard skills : frameworks, MLOps, cloud, conteneurisation. Les soft skills : analyse, communication, gestion de projet, vulgarisation. Et au milieu, les axes d'amelioration — parce qu'un bon manager sait aussi reconnaitre ce qu'il ne maitrise pas encore.
+
+Pourquoi cet exercice est important dans ma demarche ? Parce qu'il m'a force a mettre des mots sur ma progression. Au debut de la formation, je voyais l'IA comme une boite noire magique. Aujourd'hui, je sais comment fonctionne un transformer, je sais deployer un LLM localement, je sais orchestrer des agents. Je ne suis pas le meilleur data scientist du monde — ce n'est pas mon role. Mon role, c'est de savoir de quoi je parle quand mes equipes me proposent une solution.
+
+Cette carte mentale, elle est accessible de deux facons : directement en Markdown dans le depot, et visuellement dans le Dashboard React dont je vais vous parler maintenant.
+
+L'evolution du metier est claire : l'AI Engineer d'aujourd'hui ne peut plus se contenter d'entrainer des modeles. Il doit maitriser l'infrastructure, la securite, le cout, la gouvernance. C'est exactement ce que ce portfolio demontre. Et en tant que directeur technique, cette vision globale est mon pain quotidien.
 -->
 
-# 5. Gestion de Projet
+# 4. Livrable 2 : Carte Mentale
+
+#### **Compétences et réflexivité — <strong>Hard skills, soft skills, axes d'amélioration</strong>
+
+<div class="rgpd-grid">
+  <div class="rgpd-col">
+    <div class="rgpd-title">Hard Skills</div>
+    <div class="rgpd-text">
+      Python · PyTorch · TensorFlow<br>
+      LangChain · LangGraph · Airflow<br>
+      Docker · OKD · Kubernetes<br>
+      FastAPI · MLflow · Evidently
+    </div>
+  </div>
+  <div class="rgpd-col">
+    <div class="rgpd-title">Soft Skills</div>
+    <div class="rgpd-text">
+      Management d'équipe technique<br>
+      Vulgarisation et communication<br>
+      Autonomie et prise de décision<br>
+      Gestion de projet agile
+    </div>
+  </div>
+  <div class="rgpd-col">
+    <div class="rgpd-title">Axes d'amélioration</div>
+    <div class="rgpd-text">
+      Cloud natif (AWS, Azure)<br>
+      MLOps avancé (Kubeflow, DVC)<br>
+      Monitoring production<br>
+      Documentation systématique
+    </div>
+  </div>
+</div>
+
+---
+
+<!--
+(1 min)
+
+Troisieme livrable : le portfolio en ligne.
+
+C'est un Dashboard React deploye sur GitHub Pages. Il presente l'ensemble des 15 projets avec leur progression visible, les competences associees, et les liens vers chaque livrable.
+
+Il y a aussi le site vitrine de SophIA a sophia.kisai.fr, qui sert de point d'entree vers la plateforme agentique.
+
+Ce que j'aime dans ce livrable, c'est qu'il rend concrets les deux premiers. SophIA, c'est technique. La carte mentale, c'est abstrait. Le Dashboard, c'est la vitrine qui montre tout ca de facon propre et professionnelle. C'est exactement l'outil dont j'aurais besoin en tant que manager pour presenter le travail de mon equipe a la direction.
+
+Les trois livrables sont en ligne, accessibles, operationnels. Le code source est public sur GitHub. Tout est documente.
+-->
+
+# 5. Livrable 3 : Portfolio en Ligne
+
+#### **Dashboard React GitHub Pages — <strong>3 livrables accessibles</strong>
+
+<div class="rgpd-grid">
+  <div class="rgpd-col">
+    <div class="rgpd-title">Dashboard</div>
+    <div class="rgpd-text">
+      <a href="https://kisai-dg-slu.github.io">kisai-dg-slu.github.io</a><br><br>
+      15 projets avec progression<br>
+      Compétences et liens<br>
+      Synthèse visuelle
+    </div>
+  </div>
+  <div class="rgpd-col">
+    <div class="rgpd-title">Site Vitrine SophIA</div>
+    <div class="rgpd-text">
+      <a href="https://sophia.kisai.fr">sophia.kisai.fr</a><br><br>
+      Plateforme agentique<br>
+      Documentation live<br>
+      Point d'entrée utilisateur
+    </div>
+  </div>
+  <div class="rgpd-col">
+    <div class="rgpd-title">Code source</div>
+    <div class="rgpd-text">
+      <a href="https://github.com/Kisai-DG-SLU/portfolio">github.com/Kisai-DG-SLU</a><br><br>
+      Dépôts publics<br>
+      Code ouvert<br>
+      Contribution possible
+    </div>
+  </div>
+</div>
+
+---
+
+<!--
+(1 min 30)
+
+Parlons maintenant de comment j'ai géré ce projet.
+
+Parce que oui, j'avais un plan. Meme en solo, j'ai applique une methode de gestion de projet rigoureuse : backlog de tickets sur Forgejo, sprints organises par phase (MVP, V2, V3, V4), et des KPIs pour mesurer la qualite.
+
+Les KPIs : disponibilite du cluster visee a 99.5%, temps de reponse inference sous les 5 secondes, utilisation GPU entre 60 et 80%, couverture de tests au-dela de 80%.
+
+Le budget : 3700 euros d'investissement initial pour le GPU et le serveur. 50 euros par mois d'electricite. Compare a 300 euros par mois pour une solution cloud equivalente. Amorti en moins d'un an.
+
+La roadmap est claire. Le MVP est operationnel : cluster OKD, LiteLLM, 5 agents. La V2 est en cours avec le RAG, le Dashboard et le site vitrine. La V3 apportera la supervision automatisee du cluster par Dionysos, et la V4 l'industrialisation complete avec les workflows n8n et les outils MCP.
+
+J'ai gere ce projet comme je gere une equipe : avec des objectifs clairs, des echeances, et de la transparence sur l'avancement. Et c'est ce qui fait la difference entre un projet amateur et un projet professionnel. Le risque du solo, c'est le manque de regard critique. Je l'ai compense par des outils de monitoring, des tests systematiques, et une documentation rigoureuse.
+-->
+
+# 6. Gestion de Projet
 
 #### **Méthodologie Kanban/Scrum hybride — <strong>Roadmap V1 à V4</strong>
 
@@ -547,17 +636,24 @@ des tests systématiques et une documentation rigoureuse."
 ---
 
 <!--
-Note: 1 min 30. Bilan critique. Montrer qu'on a du recul.
-"Forces : souveraineté, coût, sécurité. Faiblesses : complexité, GPU contraint."
+(1 min 30)
 
-CHALLENGE: Axes d'amélioration. Charlotte va demander "que feriez-vous mieux?"
-Répondre : (1) schéma C4 unifié dès l'origine, (2) tests plus tôt dans le cycle,
-(3) documentation API systématique.
+Parlons bilan. J'aime etre honnete.
+
+Les forces : souverainete totale, cout maitrise, securite grace a l'isolation reseau, et surtout l'agnosticisme LLM. Je peux changer de modele demain sans rien casser.
+
+Les faiblesses : la complexite OKD. C'est un cout que j'assume mais qui demande une expertise pointue pour la maintenance. Le GPU est contraint a 16 Go. La documentation pourrait etre meilleure. Et j'aurais du integrer les tests plus tot dans le cycle de developpement.
+
+Si je devais refaire quelque chose ? Je ferais un schema C4 unifie des le depart. J'ecrirais la documentation API en parallele du code. J'ecrirais les tests avant de coder, pas apres.
+
+Mais c'est ca, la reflexivite. C'est reconnaitre que mes choix ont des consequences et les assumer. La complexite OKD n'est pas un defaut de conception — c'est le prix de la souverainete. Et en tant que directeur technique, c'est exactement le genre de compromis que je dois savoir evaluer et communiquer a ma direction.
+
+Ce que cette formation m'a apporte, au-dela des competences techniques, c'est cette capacite a evaluer des solutions avec un regard critique. A ne pas me laisser bluffer par des promesses techniques. A savoir dire "cette solution est elegante mais voila ce qu'elle coute en maintenance".
 -->
 
-# 6. Résultats & Bilan Critique
+# 7. Bilan & Réflexivité
 
-#### **Forces et axes d'amélioration — <strong>Réflexivité</strong>
+#### **Forces et axes d'amélioration — <strong>Regard critique</strong>
 
 <div class="tech-comparison">
   <div class="tech-header header-a">Forces</div>
@@ -583,42 +679,46 @@ Répondre : (1) schéma C4 unifié dès l'origine, (2) tests plus tôt dans le c
 ---
 
 <!--
-Note: 1 min 30. Vision et perspectives. Montrer la roadmap.
-"SophIA ne s'arrête pas à la V2. V3 apporte la supervision automatisée
-du cluster, V4 l'industrialisation complète."
+(1 min 30)
 
-CHALLENGE: Évolution du métier (approfondir). "Le métier d'AI Engineer évolue
-vers plus de DevOps et de SecOps. Dans 3 ans, un AI Engineer devra savoir
-déployer, sécuriser et monitorer sa plateforme."
+Je termine avec la feuille de route.
+
+SophIA ne s'arrete pas la. La V3 arrive avec Dionysos pour superviser le cluster automatiquement, Hephaistos pour creer des pods de dev a la demande, et un CI/CD industrialise. La V4 ira plus loin avec des workflows n8n, les outils MCP pour l'integration IDE, et les agents Athena et Ouranos pour la gouvernance.
+
+Et mon objectif professionnel dans tout ca ? Head of AI Platform. Pas pour etre celui qui code, mais celui qui conçoit, architecte, challenge et federe.
+
+Le metier d'AI Engineer evolue vers plus de DevOps et de SecOps. Dans trois ans, un AI Engineer devra savoir deployer, securiser et monitorer sa plateforme. C'est exactement la ou je positionne SophIA — et c'est exactement la ou je veux emmener mes futures equipes.
+
+J'ajoute l'IA a ma boite a outils de directeur technique. Pas pour remplacer mes equipes — pour les comprendre, les guider, et federer autour d'une vision commune. C'est ca, la valeur ajoutee d'un DT qui a fait le travail de comprendre la technique : la confiance qu'il inspire a ses equipes, et la credibilite qu'il a aupres de sa direction.
 -->
 
-# 7. Roadmap & Perspectives
+# 8. Perspectives
 
-#### **Prochaines étapes — <strong>Objectif : Head of AI Platform</strong>
+#### **Roadmap V3-V4 — <strong>Objectif : Head of AI Platform</strong>
 
 <div class="rgpd-grid">
   <div class="rgpd-col">
     <div class="rgpd-title">V3 · Supervision</div>
     <div class="rgpd-text">
       Dionysos : supervision automatisée du cluster<br><br>
-      Hephaistos : création de pods de dev à la demande<br><br>
+      Hephaistos : pods de dev à la demande<br><br>
       CI/CD BuildConfig industrialisé
     </div>
   </div>
   <div class="rgpd-col">
     <div class="rgpd-title">V4 · Industrialisation</div>
     <div class="rgpd-text">
-      n8n pour les workflows métier<br><br>
+      n8n workflows métier<br><br>
       Outils MCP pour intégration IDE<br><br>
       Athena RBAC et Ouranos HITL
     </div>
   </div>
   <div class="rgpd-col">
-    <div class="rgpd-title">Objectif Pro</div>
+    <div class="rgpd-title">Head of AI Platform</div>
     <div class="rgpd-text">
-      <strong>Head of AI Platform</strong><br><br>
-      Encadrer, challenger et guider<br>les équipes d'ingénierie<br><br>
-      Concevoir et industrialiser des plateformes IA souveraines
+      Concevoir et industrialiser<br>des plateformes IA souveraines<br><br>
+      Encadrer, challenger, guider<br>les équipes d'ingénierie<br><br>
+      Fédérer autour d'une vision
     </div>
   </div>
 </div>
@@ -629,7 +729,7 @@ déployer, sécuriser et monitorer sa plateforme."
 
 <div class="validation-box">
   <h3 style="text-transform:none; color:var(--color-primary); margin:0;">
-    Portfolio validé : 15 projets, 1608 heures de formation, une plateforme agentique souveraine déployée sur OKD bare-metal.
+    Trois livrables P15 opérationnels : SophIA, carte mentale, portfolio en ligne.
   </h3>
 </div>
 
@@ -639,8 +739,11 @@ déployer, sécuriser et monitorer sa plateforme."
 </div>
 
 <!--
-Note: 30 sec. Conclusion rapide. Remercier. Ouvrir les questions.
+(30 sec)
 
-CHALLENGE: Les 6 axes sont couverts dans les slides précédentes.
-Charlotte peut revenir sur n'importe lequel.
+Voila pour cette presentation. J'ai couvert mes trois livrables P15 : le projet technique SophIA, la carte mentale de reflexivite, et le portfolio en ligne.
+
+Je suis disponible pour vos questions, que ce soit sur les choix techniques, la demarche de gestion de projet, ou mes perspectives professionnelles. Merci de votre attention.
+
+(Note pour les questions : les six axes challenges sont couverts dans la presentation. Charlotte peut revenir sur n'importe quel point — objectif pro, choix OKD vs cloud, apport du portfolio, evolution du metier, gestion de projet solo, axes d'amelioration. Chaque reponse est deja dans le script des slides correspondants.)
 -->
