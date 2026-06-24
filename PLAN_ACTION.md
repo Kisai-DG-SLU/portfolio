@@ -40,7 +40,7 @@
 | Rapport de conduite de projet | 2j | Fait |
 | Carte mentale | 1j | Fait |
 | Portfolio Dashboard | 2j | Fait |
-| Preparation soutenance | 0.5j | A faire |
+| Preparation soutenance | 1j | En cours |
 
 ## Projets relies
 
@@ -59,4 +59,26 @@
 - Mise a jour du README avec les URLs publiques et statut a jour
 - Mise a jour du plan d action (toutes les etapes marquees faites)
 
-**Etat :** Projet termine, reste preparation soutenance orale
+### Session du 24 juin 2026
+
+**Travail effectue :**
+- Creation du dossier docs/images/ avec logo SophIA
+- Redaction des slides de soutenance P15 au format Marp (9 slides, template P14)
+  - Slide 1 Lead : SophIA Portfolio AI Engineer
+  - Slide 2 Contexte & Problematique : Shadow AI, souverainete
+  - Slide 3 Les 15 Projets Fondateurs : progression pedagogique
+  - Slide 4 Portfolio & Competences : Dashboard, carte mentale, site
+  - Slide 5 Architecture SophIA : OKD, 9 namespaces, 5 agents
+  - Slide 6 Gestion de Projet : methodo, KPIs, budget, roadmap
+  - Slide 7 Resultats & Bilan Critique : forces, axes d'amelioration
+  - Slide 8 Roadmap & Perspectives : V3, V4, objectif Head of AI Platform
+  - Slide 9 Conclusion : Merci, questions
+- Integration du template P14 : backgroundImage, CSS complet, layout (staff-grid, rgpd-grid, tech-comparison, validation-box)
+- Logo officiel SophIA integre (sophia-icon-512.png depuis sophia.kisai.fr)
+- Ancien logo SVG supprime
+- 9 annotations CHALLENGE couvrant les 6 axes Charlotte integrees dans les speaker notes
+- 3 commits pushes sur main
+
+**Reste a faire :**
+- Rediger le discours de soutenance (speaker notes detaillees)
+- Eventuellement : fiche anti-challenge
